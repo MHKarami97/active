@@ -12,14 +12,14 @@ include: ["_pages"]
 permalink: /:title/
 
 # Authors
-authors:
-  mhk:
-    name: Active
-    display_name: Active
-    # gravatar: dec346435389d99f1ac6bbfd985f9b2f
-    email: mhkarami97@gmail.com
-    web: https://active-group.ir
-    description: "Active"
+#authors:
+#  mhk:
+#    name: Active
+#    display_name: Active
+#    gravatar: dec346435389d99f1ac6bbfd985f9b2f
+#    email: mhkarami97@gmail.com
+#    web: https://active-group.ir
+#    description: "Active"
 
 # Plugins
 plugins:
