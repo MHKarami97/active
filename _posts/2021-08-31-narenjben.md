@@ -63,9 +63,9 @@ rating: 5
 
 ---
 
-`کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]
+`کوچسرفینگ` : [couchsurfing](https://www.couchsurfing.com/events/111) [نیاز به vpn]
 
-`گروه موقت واتساپ` : [whatsapp]() [در صورت باز نشدن لینک را در یکی از چت‌های واتساپ کپی کنید و سپس بر روی آن کلیک کنید]
+`گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/KCvvASIcRg65ZZfhQttRlo) [در صورت باز نشدن لینک را در یکی از چت‌های واتساپ کپی کنید و سپس بر روی آن کلیک کنید]
 
 `موقعیت` : [map location](https://www.google.com/maps/place/Narenj+Ben,+Shirgah,+Mazandaran+Province/data=!4m2!3m1!1s0x3f854e14814a4e0d:0xf0bc372dc264fda?sa=X&ved=2ahUKEwjH3t6F49ryAhWLDcAKHagKAuUQ8gF6BAgZEAE)
 
