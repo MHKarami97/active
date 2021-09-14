@@ -37,6 +37,48 @@
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
+<style>
+    .calcualte input[type=number],
+    .calcualte select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .calcualte input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .calcualte input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .calcualte input[type=number]::-webkit-inner-spin-button,
+    .calcualte input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    .calcualte {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+</style>
+
 </head>
 
 {% if jekyll.environment == 'production' %}
@@ -185,6 +227,16 @@ ga('send', 'pageview');
 {% if page.layout == 'post' %}
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}
+
+<script>
+    function calculate() {
+        let x = document.getElementById("input").value;
+
+        let resultValue = (((+x) / (100)) * 20 * 3000) / 4;
+
+        document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + resultValue + " تومان ";
+    }
+</script>
 
 </body>
 </html>
