@@ -53,7 +53,7 @@ permalink: "/calculate.html"
 
     <input type="submit" value="محاسبه" onclick="calculate()">
 
-    <p id="result"></p>
+    <p id="result" style="text-align: right;"></p>
 </div>
 
 <script>
@@ -62,6 +62,6 @@ permalink: "/calculate.html"
 
         let resultValue = (((+x) / (100)) * 20 * 3000) / 4;
 
-        document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + resultValue + " تومان ";
+        document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + "<b>" + resultValue + "</b>" + " تومان ";
     }
 </script>
