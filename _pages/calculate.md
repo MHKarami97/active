@@ -1,5 +1,5 @@
 ---
 layout: calcualte
 title: ماشین حساب
-permalink: /calcualte/
+permalink: /calcualte
 ---
