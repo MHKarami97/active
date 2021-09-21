@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "ایونت 129 - تنگه و آبشار نارنج دره"
+title:  "ایونت 131 - تنگه و آبشار نارنج دره"
 author: mhk
 categories: [Nature]
 tags: [nature, narenjdare]
-image: assets/img/nature/129-narenjdare.jpeg
-description: "ایونت 129 - تنگه و آبشار نارنج دره"
+image: assets/img/nature/131-narenjdare.jpeg
+description: "ایونت 131 - تنگه و آبشار نارنج دره"
 featured: true
 hidden: true
 rating: 5
