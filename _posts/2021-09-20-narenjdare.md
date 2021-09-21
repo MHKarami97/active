@@ -66,7 +66,7 @@ rating: 5
 
 `کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]
 
-`گروه موقت واتساپ` : [whatsapp]() [در صورت باز نشدن لینک را در یکی از چت‌های واتساپ کپی کنید و سپس بر روی آن کلیک کنید]
+`گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/DRiu6IapwWADW1KcWJtabo) [در صورت باز نشدن لینک را در یکی از چت‌های واتساپ کپی کنید و سپس بر روی آن کلیک کنید]
 
 `آب و خوا` : [weather](https://fa.weather.town/forecast/iran/ostan-e-mazandaran/vanush/#September-23)
 
