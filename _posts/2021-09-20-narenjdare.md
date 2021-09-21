@@ -64,7 +64,7 @@ rating: 5
 
 ---
 
-`کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]
+`کوچسرفینگ` : [couchsurfing](https://www.couchsurfing.com/events/131) [نیاز به vpn]
 
 `گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/DRiu6IapwWADW1KcWJtabo) [در صورت باز نشدن لینک را در یکی از چت‌های واتساپ کپی کنید و سپس بر روی آن کلیک کنید]
 
