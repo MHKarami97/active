@@ -75,15 +75,15 @@ rating: 5
 ## عکس های از مسیر
 
 <p align="center">
-  <img src="/assets/img/posts/138/01.jpeg" alt="mhkarami97" width="600" />
+  <img src="/assets/img/posts/138/01.jpg" alt="mhkarami97" width="600" />
 </p>
 
 <p align="center">
-  <img src="/assets/img/posts/138/02.jpeg" alt="mhkarami97" width="600" />
+  <img src="/assets/img/posts/138/02.jpg" alt="mhkarami97" width="600" />
 </p>
 
 <p align="center">
-  <img src="/assets/img/posts/138/03.jpeg" alt="mhkarami97" width="600" />
+  <img src="/assets/img/posts/138/03.jpg" alt="mhkarami97" width="600" />
 </p>
 
 ---
