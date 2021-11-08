@@ -4,7 +4,7 @@ title:  "ایونت 174 - دریاچه حوض سلطان و دریاچه طغر�
 author: mhk
 categories: [Nature]
 tags: [nature, qom]
-image: assets/img/nature/174-hoze_soltan.jpeg
+image: assets/img/nature/174-hoze_soltan.jpg
 description:   "ایونت 174 - دریاچه حوض سلطان و دریاچه طغرد و غار کهک"
 featured: true
 hidden: true
@@ -137,7 +137,7 @@ rating: 5
 
 `کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]
 
-`گروه موقت تلگرام` : [telegram]()
+`گروه موقت تلگرام` : [telegram](https://t.me/joinchat/kigccssLV9sxODM0)
 
 `آب و هوا` : [weather](https://weather.com/fa-IR/weather/tenday/l/%D9%82%D9%85+%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D9%82%D9%85?canonicalCityId=c3acdd563120e47ae9c4ef8255d6c3d5fc8f5741e561b1653bd1952878361980)
 
