@@ -94,7 +94,7 @@ rating: 5
 
 `کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]  
 
-`گروه موقت واتساپ` : [whatsapp]()  
+`گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/ETRzF8u7CasBXRsFpfFzHL)  
 
 `آب و هوا` : [weather](https://weather.com/fa-IR/weather/tenday/l/Amol+%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D9%85%D8%A7%D8%B2%D9%86%D8%AF%D8%B1%D8%A7%D9%86?canonicalCityId=71053b798c3a31ab94d6c2b429e703db450cb19a5274cb20155c04ddb56b7664)  
 
