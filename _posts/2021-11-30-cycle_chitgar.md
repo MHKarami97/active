@@ -4,7 +4,7 @@ title: "ایونت 198+1 - اولین ایونت دوچرخه سواری در چ
 author: mhk
 categories: [Nature]
 tags: [nature, tehran]
-image: assets/img/cycle/198+1-chitgar.jpeg.jpeg
+image: assets/img/cycle/198+1-chitgar.jpeg
 description: "ایونت 198+1 - اولین ایونت دوچرخه سواری در چیتگر"
 featured: true
 hidden: true
