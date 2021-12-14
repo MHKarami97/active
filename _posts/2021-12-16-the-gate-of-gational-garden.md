@@ -95,7 +95,7 @@ rating: 5
 
 `کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]  
 
-`گروه موقت واتساپ` : [whatsapp]()  
+`گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/CpLZkbFQBuFCxdcn36eOvQ)  
 
 `آب و هوا` : [weather](https://fa.weather.town/forecast/iran/ostan-e-tehran/tehran-sar/#December-16)
 
