@@ -93,7 +93,7 @@ rating: 5
 
 ## لینک‌ها
 
-`کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]  
+`کوچسرفینگ` : [couchsurfing](https://www.couchsurfing.com/events/215-1) [نیاز به vpn]  
 
 `گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/CpLZkbFQBuFCxdcn36eOvQ)  
 
