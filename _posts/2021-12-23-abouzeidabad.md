@@ -4,7 +4,7 @@ title: "ایونت 224 - کویر ابوزید آباد"
 author: mhk
 categories: [Nature]
 tags: [nature, isfahan]
-image: assets/img/nature/224-abozeyd_abad_kavir.jpeg
+image: assets/img/nature/224-abouzeidabad.jpeg
 description: "ایونت 224 - کویر ابوزید آباد"
 featured: true
 hidden: true
@@ -32,7 +32,6 @@ rating: 5
   - `محل جمع شدن برای حرکت` : اول اتوبان قم
 
 ## نکات
-
 `اماکن نزدیک` : ابوزیدآباد، کاشان   
 `مدت زمان بازدید` : 2 روز   
 `ساعت دسترسی` : شبانه روزی  
@@ -47,10 +46,6 @@ rating: 5
 
 <p align="center">
   <img src="/assets/img/posts/224/02.jpg" alt="mhkarami97" width="600" />
-</p>
-
-<p align="center">
-  <img src="/assets/img/posts/224/03.webp" alt="mhkarami97" width="600" />
 </p>
 
 <p align="center">
@@ -75,6 +70,6 @@ rating: 5
 
 `گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/GRNSqsq0etoHaRx86Vwhpw)  
 
-`آب و هوا` : [weather](https://fa.weather.town/forecast/iran/isfahan/abuzeydabad/#December-23)
+`آب و هوا` : [weather](https://fa.weather.town/forecast/iran/isfahan/abuzeydabad/#December-23)  
 
 `موقعیت` : [map location](https://www.google.com/maps/place/%DA%A9%D9%88%DB%8C%D8%B1+%D8%A7%D8%A8%D9%88%D8%B2%DB%8C%D8%AF%D8%A2%D8%A8%D8%A7%D8%AF%E2%80%AD/@33.9016576,51.7433737,14z/data=!4m13!1m7!3m6!1s0x3f965c1e3a805d07:0xf5c71b58ca4661a4!2sAbouzeidabad,+Isfahan+Province!3b1!8m2!3d33.9005432!4d51.762521!3m4!1s0x3f965b0c50124887:0x122b55a2feb42a93!8m2!3d33.9166416!4d51.7969436)  
