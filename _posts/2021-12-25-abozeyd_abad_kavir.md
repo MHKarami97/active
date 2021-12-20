@@ -73,7 +73,7 @@ rating: 5
 
 `کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]  
 
-`گروه موقت واتساپ` : [whatsapp]()  
+`گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/GRNSqsq0etoHaRx86Vwhpw)  
 
 `آب و هوا` : [weather](https://fa.weather.town/forecast/iran/isfahan/abuzeydabad/#December-23)
 
