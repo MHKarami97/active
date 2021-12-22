@@ -102,4 +102,4 @@ rating: 5
 
 `ابیانه` : [map location](https://www.google.com/maps/place/Abyaneh,+Isfahan+Province/@33.7081078,51.5789304,11.14z/data=!4m5!3m4!1s0x3f961364fed5ebe3:0x8727ed4328dc89c8!8m2!3d33.5859969!4d51.5899544)  
 
-`شهر زیرزمینی اویی` : [map location](https://www.google.com/maps/place/Abyaneh,+Isfahan+Province/@33.7081078,51.5789304,11.14z/data=!4m5!3m4!1s0x3f961364fed5ebe3:0x8727ed4328dc89c8!8m2!3d33.5859969!4d51.5899544)  
+`شهر زیرزمینی اویی` : [map location](https://www.google.com/maps/place/Noushabad+Underground+City/@34.0771886,51.4378615,15z/data=!4m2!3m1!1s0x0:0xa13df9c62169920a?sa=X&ved=2ahUKEwjWve-e6_b0AhUnxIUKHY61AawQ_BJ6BAhDEAU)  
