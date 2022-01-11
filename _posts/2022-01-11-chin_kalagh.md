@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "ایونت 166 - قله چین کلاغ"
+title:  "ایونت 262 - قله چین کلاغ"
 author: mhk
 categories: [Nature]
 tags: [nature, chin_kalagh]
-image: assets/img/nature/166-chin_kalagh.jpeg
-description: "ایونت 166 - قله چین کلاغ"
+image: assets/img/nature/262-chin_kalagh.jpeg
+description: "ایونت 262 - قله چین کلاغ"
 featured: true
 hidden: true
 rating: 5
@@ -21,8 +21,8 @@ rating: 5
 
 
 ## تاریخ و زمان سفر  
-  - `رفت`: پنجشنبه 13 آبان  
-  - `بازگشت`: پنجشنبه 13 آبان   
+  - `رفت`: پنجشنبه 23 دی  
+  - `بازگشت`: پنجشنبه 23 دی   
   - `درجه سختی برنامه` : 4 از 10  
   - `ساعت تجمیع در محل حرکت` : 7 صبح
   - `محل قرار` : شهرک بام تهران، بالای سعادت آباد
@@ -91,6 +91,6 @@ rating: 5
 
 `گروه موقت واتساپ` : [whatsapp]() [در صورت باز نشدن لینک را در یکی از چت‌های واتساپ کپی کنید و سپس بر روی آن کلیک کنید]
 
-`آب و هوا` : [weather](https://fa.weather.town/forecast/iran/ostan-e-tehran/tehran/#November-04)
+`آب و هوا` : [weather](https://www.windy.com/35.829/51.355?35.798,51.338,13)
 
 `موقعیت` : [map location](https://www.google.com/maps/place/Chin+Kalagh/data=!4m2!3m1!1s0x3f8e09d3d2645975:0xae2133743bbcf83f!5m1!1e4?sa=X&ved=2ahUKEwitk9HnivnzAhXjsaQKHUSNA8cQ8gF6BAhcEAE)
