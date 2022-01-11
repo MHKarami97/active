@@ -62,10 +62,6 @@ rating: 5
 ## عکس های از مسیر
 
 <p align="center">
-  <img src="/assets/img/posts/166/01.jpg" alt="mhkarami97" width="600" />
-</p>
-
-<p align="center">
   <img src="/assets/img/posts/166/02.jpg" alt="mhkarami97" width="600" />
 </p>
 
@@ -89,7 +85,7 @@ rating: 5
 
 `کوچسرفینگ` : [couchsurfing]() [نیاز به vpn]
 
-`گروه موقت واتساپ` : [whatsapp]() [در صورت باز نشدن لینک را در یکی از چت‌های واتساپ کپی کنید و سپس بر روی آن کلیک کنید]
+`گروه موقت واتساپ` : [whatsapp](https://chat.whatsapp.com/FIbeQfBke2aJEQOaKGdlYu)  
 
 `آب و هوا` : [weather](https://www.windy.com/35.829/51.355?35.798,51.338,13)
 
