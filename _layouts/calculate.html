@@ -75,9 +75,11 @@ permalink: "/calculate.html"
 
             let moreValue = (+more) / personsCount;
             resultValue += moreValue;
+
+            resultValue = Math.round(resultValue);
         }
 
-        document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + "<b>" + resultValue + "</b>" + " تومان ";
+        document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + "<b>" + new Intl.NumberFormat('de-DE').format(resultValue) + "</b>" + " تومان ";
     }
 
     function showMore() {
