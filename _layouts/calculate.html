@@ -48,11 +48,12 @@ permalink: "/calculate.html"
 
 <h3 style="text-align: right;">محاسبه هزینه ماشین به ازای هر نفر</h3>
 
-<div class="calculate">
+<div class="calculate" style="text-align:right;">
     <input type="number" id="input" step="10" name="firstinputname" placeholder="مسافت بر حسب کیلومتر" required>
 
-    <label for="moreInfo">هزینه جانبی (پارکینگ، عوارضی یا ...) دارم</label>
     <input type="checkbox" id="moreInfo" name="moreInfo" onclick="showMore()">
+    <label for="moreInfo">هزینه جانبی (پارکینگ، عوارضی یا ...) دارم</label>
+
     <input type="number" id="moreInfoInput" step="10" name="moreInfoInput" placeholder="هزینه جانبی بر اساس تومان"
         style="display:none;">
 
