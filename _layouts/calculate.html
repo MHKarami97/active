@@ -72,7 +72,9 @@ permalink: "/calculate.html"
         let resultValue = (((+x) / (100)) * 35 * 3000) / personsCount;
 
         if (more && more != 0) {
-            resultValue += (+more);
+
+            let moreValue = (+more) / personsCount;
+            resultValue += moreValue;
         }
 
         document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + "<b>" + resultValue + "</b>" + " تومان ";
