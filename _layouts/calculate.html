@@ -51,6 +51,11 @@ permalink: "/calculate.html"
 <div class="calculate">
     <input type="number" id="input" step="10" name="firstinputname" placeholder="مسافت بر حسب کیلومتر" required>
 
+    <label for="moreInfo">هزینه جانبی (پارکینگ، عوارضی یا ...) دارم</label>
+    <input type="checkbox" id="moreInfo" name="moreInfo" onclick="showMore()">
+    <input type="number" id="moreInfoInput" step="10" name="moreInfoInput" placeholder="هزینه جانبی بر اساس تومان"
+        style="display:none;">
+
     <input type="submit" value="محاسبه" onclick="calculate()">
 
     <p id="result" style="text-align: right;"></p>
@@ -59,11 +64,28 @@ permalink: "/calculate.html"
 <script>
     function calculate() {
         let x = document.getElementById("input").value;
+        let more = document.getElementById("moreInfoInput").value;
 
         let personsCount = 3;
 
-        let resultValue = (((+x) / (100)) * 25 * 3000) / personsCount;
+        let resultValue = (((+x) / (100)) * 35 * 3000) / personsCount;
+
+        if (more && more != 0) {
+            resultValue += (+more);
+        }
 
         document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + "<b>" + resultValue + "</b>" + " تومان ";
+    }
+
+    function showMore() {
+        var isChecked = document.getElementById("moreInfo").checked;
+
+        if (isChecked) {
+            document.getElementById("moreInfoInput").style.display = "block";
+        }
+        else {
+            document.getElementById("moreInfoInput").style.display = "none";
+            document.getElementById("moreInfoInput").value = 0;
+        }
     }
 </script>
