@@ -52,7 +52,7 @@ permalink: "/calculate.html"
     <input type="number" id="input" step="10" name="firstinputname" placeholder="مسافت بر حسب کیلومتر" required>
 
     <input type="checkbox" id="moreInfo" name="moreInfo" onclick="showMore()">
-    <label for="moreInfo">هزینه جانبی (پارکینگ، عوارضی یا ...) دارم</label>
+    <label for="moreInfo">هزینه جانبی (پارکینگ، عوارضی یا ...) دارم</label><br>
 
     <input type="number" id="moreInfoInput" step="10" name="moreInfoInput" placeholder="هزینه جانبی بر اساس تومان"
         style="display:none;">
@@ -60,7 +60,7 @@ permalink: "/calculate.html"
     <input type="checkbox" id="dirtInputName" name="dirtInputName" onclick="showDirtMore()">
     <label for="dirtInputName">جاده خاکی دارم (دقت کنید که کیلومتر خاکی را در بخش بالا وارد نکرده باشید)</label>
 
-    <input type="number" id="dirtInput" step="10" name="dirtInput" placeholder="مسافت بر حسب کیلومتر"
+    <input type="number" id="dirtInput" step="10" name="dirtInput" placeholder="مسافت خاکی بر حسب کیلومتر"
         style="display:none;">
 
     <input type="submit" value="محاسبه" onclick="calculate()">
@@ -96,7 +96,7 @@ permalink: "/calculate.html"
     }
 
     function showMore() {
-        var isChecked = document.getElementById("dirtInput").checked;
+        var isChecked = document.getElementById("moreInfo").checked;
 
         if (isChecked) {
             document.getElementById("moreInfoInput").style.display = "block";
