@@ -39,3 +39,10 @@ comments: true
 <p align="center">
   <img src="/assets/img/join/05.jpeg" alt="join" width="400" />
 </p>
+
+## پایان
+مشاهده صفحه زیر به معنی پایان عضویت است.   
+
+<p align="center">
+  <img src="/assets/img/join/06.jpeg" alt="join" width="400" />
+</p>
