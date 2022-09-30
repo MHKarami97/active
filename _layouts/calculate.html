@@ -48,14 +48,20 @@ permalink: "/calculate.html"
 
 <h3 style="text-align: right;">محاسبه هزینه ماشین به ازای هر نفر</h3>
 
-<div class="calculate">
+<div class="calculate" style="text-align:right;">
     <input type="number" id="input" step="10" name="firstinputname" placeholder="مسافت بر حسب کیلومتر" required>
 
-    <select id="persons" required>
-        <option value="0" selected disabled>تعداد سرنشینان</option>
-        <option value="1">3 و کمتر</option>
-        <option value="2">4 نفر</option>
-    </select>
+    <input type="checkbox" id="moreInfo" name="moreInfo" onclick="showMore()">
+    <label for="moreInfo">هزینه جانبی (پارکینگ، عوارضی یا ...) دارم</label><br>
+
+    <input type="number" id="moreInfoInput" step="10" name="moreInfoInput" placeholder="هزینه جانبی بر اساس تومان"
+        style="display:none;">
+
+    <input type="checkbox" id="dirtInputName" name="dirtInputName" onclick="showDirtMore()">
+    <label for="dirtInputName">جاده خاکی دارم (دقت کنید که کیلومتر خاکی را در بخش بالا وارد نکرده باشید)</label>
+
+    <input type="number" id="dirtInput" step="10" name="dirtInput" placeholder="مسافت خاکی بر حسب کیلومتر"
+        style="display:none;">
 
     <input type="submit" value="محاسبه" onclick="calculate()">
 
@@ -65,22 +71,51 @@ permalink: "/calculate.html"
 <script>
     function calculate() {
         let x = document.getElementById("input").value;
+        let more = document.getElementById("moreInfoInput").value;
+        let dirt = document.getElementById("dirtInput").value;
 
-        var personSelect = document.getElementById('persons');
-        var persons = personSelect.options[personSelect.selectedIndex].value;
+        let personsCount = 3;
 
-        let personsCount = 4;
+        let resultValue = (((+x) / (100)) * 35 * 3000) / personsCount;
+        let resultDirtValue = 0;
 
-        if (persons == 1) {
-            personsCount = 3;
+        if (more && more != 0) {
+            let moreValue = (+more) / personsCount;
+            resultValue += moreValue;
+
+            resultValue = Math.round(resultValue);
         }
 
-        if (persons == 2) {
-            personsCount = 4;
+        if (dirt && dirt != 0) {
+            resultDirtValue = (((+dirt) / (100)) * 35 * 3000) / personsCount;
+            resultDirtValue *= 2;
+            resultValue += resultDirtValue;
         }
 
-        let resultValue = (((+x) / (100)) * 20 * 3000) / personsCount;
+        document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + "<b>" + new Intl.NumberFormat('de-DE').format(resultValue) + "</b>" + " تومان ";
+    }
 
-        document.getElementById("result").innerHTML = "مبلغ قابل پرداخت برای هر نفر : " + "<b>" + resultValue + "</b>" + " تومان ";
+    function showMore() {
+        var isChecked = document.getElementById("moreInfo").checked;
+
+        if (isChecked) {
+            document.getElementById("moreInfoInput").style.display = "block";
+        }
+        else {
+            document.getElementById("moreInfoInput").style.display = "none";
+            document.getElementById("moreInfoInput").value = 0;
+        }
+    }
+
+    function showDirtMore() {
+        var isChecked = document.getElementById("dirtInputName").checked;
+
+        if (isChecked) {
+            document.getElementById("dirtInput").style.display = "block";
+        }
+        else {
+            document.getElementById("dirtInput").style.display = "none";
+            document.getElementById("dirtInput").value = 0;
+        }
     }
 </script>
