@@ -49,7 +49,7 @@ permalink: "/calculate.html"
 <h3 style="text-align: right;">محاسبه هزینه ماشین به ازای هر نفر</h3>
 
 <div class="calculate" style="text-align:right;">
-    <input type="number" id="input" step="10" name="firstinputname" placeholder="مسافت بر حسب کیلومتر" required>
+    <input type="number" id="input" step="10" name="firstinputname" placeholder="مسافت بر حسب کیلومتر بدون جاده خاکی" required>
 
     <input type="checkbox" id="moreInfo" name="moreInfo" onclick="showMore()">
     <label for="moreInfo">هزینه جانبی (پارکینگ، عوارضی یا ...) دارم</label><br>
@@ -58,14 +58,17 @@ permalink: "/calculate.html"
         style="display:none;">
 
     <input type="checkbox" id="dirtInputName" name="dirtInputName" onclick="showDirtMore()">
-    <label for="dirtInputName">جاده خاکی دارم (دقت کنید که کیلومتر خاکی را در بخش بالا وارد نکرده باشید)</label>
+    <label for="dirtInputName">جاده خاکی دارم</label>
 
     <input type="number" id="dirtInput" step="10" name="dirtInput" placeholder="مسافت خاکی بر حسب کیلومتر"
         style="display:none;">
 
     <input type="submit" value="محاسبه" onclick="calculate()">
 
-    <p id="result" style="text-align: right;"></p>
+
+     <p id="result" style="text-align: right;"></p>
+     <p id="result1" style="text-align: right;">فرمول محاسبه : ((x / (100)) * 35 * 3000) / 3 </p>
+     <p id="result2" style="text-align: right;">در فرمول بالا x برابر با مجموع مسافت رفت و برگشت بر حسب کیلومتر است که تقسیم بر 100 می‌شود تا هزینه بر اساس هر 100 کیلومتر حساب شود، 43 برابر با ضریب تورم و لیتر بنزین به ازای هر 100 کیلومتر است. در نهایت تقسیم بر 3 که تعداد سرنشین است می‌شود تا هزینه به ازای هر فرد حساب شود، دقت کنید که حتی اگر تعداد سرنشین ها 4 هم باشد در نهایت همان بر 3 تقسیم می‌شود</p>
 </div>
 
 <script>
