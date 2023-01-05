@@ -1,0 +1,85 @@
+---
+title: "Finisher"
+layout: default
+permalink: "/finisher.html"
+---
+
+<style>
+    .calculate input,
+    .calculate select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .calculate input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .calculate input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .calculate input::-webkit-inner-spin-button,
+    .calculate input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    .calculate {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+</style>
+
+<h3 style="text-align: right;">درست کردن متن پایانی</h3>
+
+<div class="calculate" style="text-align:right;">
+
+    <input type="submit" value="ایجاد لیست" onclick="calculate()">
+
+    <p id="result" style="text-align: right;direction: rtl;"></p><br>
+</div>
+
+<script>
+    function calculate() {
+        CalculateList();
+    }
+
+    function CalculateList() {
+
+        let result = "⛱ با تشکر از افرادی که در ایونت شرکت کردند." +
+            "<br>" +
+            "🚘 اگر همراه با ماشین فرد دیگری به ایونت آمده بودید لطفا توسط لینک زیر هزینه را حساب کنید و به حساب فرد راننده واریز نمایید. دقت کنید که در بخش مسافت مجموع مسافت (رفت و برگشت) را وارد کنید" +
+            "<br>" +
+            "🔸 active-group.ir/calculate" +
+            "<br>" +
+            "📬 اگر درباره ایونت نظری دارید لطفا آن را در لینک زیر وارد کنید:" +
+            "<br>" +
+            "🔸 active-group.ir/survey" +
+            "<br>" +
+            "📬 اگر پیشنهادی برای ایونت‌ها آینده دارید هم می‌توانید آن را در این لینک با ما در میان بگذارید:" +
+            "<br>" +
+            "🔸 active-group.ir/introduction" +
+            "<br>" +
+            "📬 لینک گروه اصلی:" +
+            "<br>" +
+            "🔸 t.me/ACTIVE_COMMUNITY";
+
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
