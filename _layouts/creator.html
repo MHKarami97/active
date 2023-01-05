@@ -1,0 +1,333 @@
+---
+title: "Creator"
+layout: default
+permalink: "/creator.html"
+---
+
+<style>
+    .calculate input,
+    .calculate select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .calculate input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .calculate input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .calculate input::-webkit-inner-spin-button,
+    .calculate input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    .calculate {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+</style>
+
+<h3 style="text-align: right;">ایونت ساز</h3>
+
+<div class="calculate" style="text-align:right;">
+
+    <select id="with">
+        <option selected disabled>انتخاب نوع ایونت</option>
+        <option value="travel">طبیعت‌کردی</option>
+    </select>
+
+    <input type="text" id="title" placeholder="عنوان" required>
+    <input type="datetime-local" id="goDateTime" placeholder="زمان رفت" required>
+    <input type="datetime-local" id="backDateTime" placeholder="زمان برگشت" required>
+    <input type="text" id="gathering" placeholder="محل جمع شدن" required>
+    <input type="number" id="difficulty" placeholder="سختی" required>
+    <input type="text" id="weather" placeholder="آب و هوا" required>
+    <input type="number" id="temperature" placeholder="میانگین دما" required>
+    <input type="text" id="description" placeholder="توضیحات" required>
+    <input type="url" id="link" placeholder="لینک گروه موقت" required>
+
+    <input type="submit" value="ایجاد ایونت" onclick="calculate()">
+
+    <p id="result" style="text-align: right;direction: rtl;"></p><br>
+</div>
+
+<script>
+    function calculate() {
+
+        let items = document.getElementById("with");
+        let witch = items.options[items.selectedIndex].value;
+
+        switch (witch) {
+            case "travel":
+                CalculateTravel();
+                break;
+            default:
+                alert("لطفا نوع ایونت را انتخاب کنید");
+                break;
+        }
+    }
+
+    function CalculateTravel() {
+        let title = document.getElementById("title").value;
+        let goDateTime = document.getElementById("goDateTime").value;
+        let backDateTime = document.getElementById("backDateTime").value;
+        let gathering = document.getElementById("gathering").value;
+        let difficulty = document.getElementById("difficulty").value;
+        let weather = document.getElementById("weather").value;
+        let temperature = document.getElementById("temperature").value;
+        let description = document.getElementById("description").value;
+        let link = document.getElementById("link").value;
+
+        if (!title || !goDateTime || !backDateTime || !gathering || !difficulty || !weather || !temperature || !description) {
+
+            alert("لطفا تمام اطلاعات خواسته شده را وارد نمایید");
+            return;
+        }
+
+        let goDateTimeFa = new Date(goDateTime);
+        let backDateTimeFa = new Date(backDateTime);
+
+        let result = "⛱ عنوان : " + title +
+            "<br>" +
+            "⌚️ زمان رفت : " + getDay(goDateTimeFa) + ", " + getMonth(goDateTimeFa) + ", " + goDateTimeFa.getHours() + ":" + goDateTimeFa.getMinutes() +
+            "<br>" +
+            "⌚️ زمان برگشت : " + getDay(backDateTimeFa) + ", " + getMonth(backDateTimeFa) + ", " + backDateTimeFa.getHours() + ":" + backDateTimeFa.getMinutes() +
+            "<br>" +
+            "🛣 محل جمع شدن : " + gathering +
+            "<br>" +
+            "⛰ درجه سختی : " + difficulty + "/10" +
+            "<br>" +
+            "🌨 آب و هوا : " + weather +
+            "<br>" +
+            "💧میانگین دما : " + temperature + " درجه" +
+            "<br>" +
+            "🗒 توضیحات : " + description +
+            "<br>" +
+            "🆓 هزینه : شرکت در رویدادهای گروه اکتیو هزینه ای ندارد و کاملا دوستانه است و خرجها بر عهده خود افراد است" +
+            "<br>" +
+            "🚗 روش رفتن : ماشین شخصی، افرادی که ماشین ندارند می‌توانند با افراد دیگر گروه هماهنگ کنند و با ماشین آن‌ها به ایونت بیایند" +
+            "<br>" +
+            "✏️ وسایل مورد نیاز : کفش، لباس فصل، تغذیه کافی، کیسه خواب، چادر، آب آشامیدنی" +
+            "<br>" +
+            "---------------------------------------------------------" +
+            "<br>" +
+            "❇️ به منظور پیشبرد اهداف گروه در نظر داریم، کمپ‌ها و شب‌نشینی‌ها همراه با کتابخوانی باشد، به‌همین منظور شرکت کنندگانی که تمایل دارند می‌توانند کتاب مورد علاقه، آخرین کتاب خوانده شده و یا کتابی که درحال مطالعه آن هستند را بدین منظور با خود آورده و قسمتی از آن را برای سایر اعضا بخوانند." +
+            "<br>" +
+            "✅ از کلیه اعضا گروه تقاضا داریم با مطالعه و رعایت مرامنامه گروه اکتیو از ایجاد سر‌و‌صدای زیاد موسیقی در محیط کمپ خودداری نموده و همچنین رعایت حال سایر همسفرها را برای استراحت بهتر بعد از ساعت 12 شب بعمل آورند. بدین منظور لطفا اسپیکر بزرگ همراه خود نیاورید و همچنین بعد از ساعت گفته شده از سروصدا در داخل و یا بیرون چادر خودداری بفرمایید." +
+            "<br>" +
+            "❇️ برای داشتن طبیعتی عاری از زباله از شرکت کنندگان تقاضا داریم ضمن عدم استفاده از ظروف پلاستیکی و یکبار مصرف و کاهش تولید زباله با آوردن کیسه زباله ما را در طرح جمع آوری زباله که توسط همراهان ایونت برگزار می‌شود؛ همراهی کنند." +
+            "<br>" +
+            "🫂 امید است با ایجاد بستری توام با آرامش، زمینه مناسبی برای ارتقا سطح نشاط، آگاهی و شعور اجتماعی برای یکدیگر ایجاد کنیم." +
+            "<br>" +
+            "❗️شرکت کردن شما در این ایونت به منزله پذیرفتن تعهد شما مبنی بر عدم استفاده و همراه داشتن مواد مخدر و مشروبات الکلی در این تور میباشد و در صورت تخطی از این امر، از شرکت فرد در ایونت‌ها جلوگیری خواهد شد." +
+            "<br>" +
+            "---------------------------------------------------------" +
+            "<br>" +
+            "⬅️ مرامنامه شرکت در ایونت:" +
+            "<br>" +
+            "🔶 active-group.ir/rules-weekend" +
+            "<br>" +
+            "⬅️ راهنما عضویت در گروه موقت ایونت:" +
+            "<br>" +
+            "🔶 active-group.ir/join" +
+            "<br>" +
+            "⬅️ راهنما محاسبه دونگ سرنشین‌ها:" +
+            "<br>" +
+            "🔶 active-group.ir/calculate" +
+            "<br>" +
+            "⬅️ لینک عضویت در گروه موقت:" +
+            "<br>" +
+            "🔶 " + link;
+
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function getDay(d) {
+        const weekday = ["یک‌شنبه", "دو‌شنبه", "سه‌شنبه", "چهار‌شنبه", "پنج‌شنبه", "جمعه", "شنبه"];
+
+        return weekday[d.getDay()];
+    }
+
+    function getMonth(d) {
+        let year = d.getFullYear();
+        let date = d.getDate();
+        let monthBase = d.getMonth();
+        let tempYear;
+        let day;
+        let month;
+        let result;
+        switch (monthBase) {
+            case 0:
+                tempYear = year - 622;
+                if (date <= 20) {
+                    const month = "دی";
+                    const day = date + 10;
+                    result = day + " " + month;
+                } else {
+                    month = "بهمن";
+                    day = date - 20;
+                    result = day + " " + month;
+                }
+                break;
+            case 1:
+                tempYear = year - 622;
+                if (date <= 19) {
+                    month = "بهمن";
+                    day = date + 11;
+                    result = day + " " + month;
+                } else {
+                    month = "اسفند";
+                    day = date - 19;
+                    result = day + " " + month;
+                }
+                break;
+            case 2: {
+                if ((year - 621) % 4 == 0) var i = 10;
+                else var i = 9;
+                if (date <= 20) {
+                    tempYear = year - 622;
+                    month = "اسفند";
+                    day = date + i;
+                    result = day + " " + month;
+                } else {
+                    tempYear = year - 621;
+                    month = "فروردين";
+                    day = date - 20;
+                    result = day + " " + month;
+                }
+            }
+                break;
+            case 3:
+                tempYear = year - 621;
+                if (date <= 20) {
+                    month = "فروردين";
+                    day = date + 11;
+                    result = day + " " + month;
+                } else {
+                    month = "ارديبهشت";
+                    day = date - 20;
+                    result = day + " " + month;
+                }
+                break;
+            case 4:
+                tempYear = year - 621;
+                if (date <= 21) {
+                    month = "ارديبهشت";
+                    day = date + 10;
+                    result = day + " " + month;
+                } else {
+                    month = "خرداد";
+                    day = date - 21;
+                    result = day + " " + month;
+                }
+
+                break;
+            case 5:
+                tempYear = year - 621;
+                if (date <= 21) {
+                    month = "خرداد";
+                    day = date + 10;
+                    result = day + " " + month;
+                } else {
+                    month = "تير";
+                    day = date - 21;
+                    result = day + " " + month;
+                }
+                break;
+            case 6:
+                tempYear = year - 621;
+                if (date <= 22) {
+                    month = "تير";
+                    day = date + 9;
+                    result = day + " " + month;
+                } else {
+                    month = "مرداد";
+                    day = date - 22;
+                    result = day + " " + month;
+                }
+                break;
+            case 7:
+                tempYear = year - 621;
+                if (date <= 22) {
+                    month = "مرداد";
+                    day = date + 9;
+                    result = day + " " + month;
+                } else {
+                    month = "شهريور";
+                    day = date - 22;
+                    result = day + " " + month;
+                }
+                break;
+            case 8:
+                tempYear = year - 621;
+                if (date <= 22) {
+                    month = "شهريور";
+                    day = date + 9;
+                    result = day + " " + month;
+                } else {
+                    month = "مهر";
+                    day = date + 22;
+                    result = day + " " + month;
+                }
+                break;
+            case 9:
+                tempYear = year - 621;
+                if (date <= 22) {
+                    month = "مهر";
+                    day = date + 8;
+                    result = day + " " + month;
+                } else {
+                    month = "آبان";
+                    day = date - 22;
+                    result = day + " " + month;
+                }
+                break;
+            case 10:
+                tempYear = year - 621;
+                if (date <= 21) {
+                    month = "آبان";
+                    day = date + 9;
+                    result = day + " " + month;
+                } else {
+                    month = "آذر";
+                    day = date - 21;
+                    result = day + " " + month;
+                }
+
+                break;
+            case 11:
+                tempYear = year - 621;
+                if (date <= 19) {
+                    month = "آذر";
+                    day = date + 9;
+                    result = day + " " + month;
+                } else {
+                    month = "دی";
+                    day = date + 21;
+                    result = day + " " + month;
+                }
+                break;
+        }
+
+        return result;
+    }
+</script>
