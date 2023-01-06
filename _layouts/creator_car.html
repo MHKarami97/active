@@ -1,91 +1,0 @@
----
-title: "CreatorCar"
-layout: default
-permalink: "/creatorCar.html"
----
-
-<style>
-    .calculate input,
-    .calculate select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    .calculate input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .calculate input[type=submit]:hover {
-        background-color: #45a049;
-    }
-
-    .calculate input::-webkit-inner-spin-button,
-    .calculate input::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        margin: 0;
-    }
-
-    .calculate {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
-    }
-</style>
-
-<h3 style="text-align: right;">درست کردن لیست ماشین</h3>
-
-<div class="calculate" style="text-align:right;">
-
-    <input type="number" id="count" placeholder="تعداد افراد" required>
-    <input type="submit" value="ایجاد لیست" onclick="calculate()">
-
-    <p id="result" style="text-align: right;direction: rtl;"></p><br>
-</div>
-
-<script>
-    function calculate() {
-        CalculateList();
-    }
-
-    function CalculateList() {
-        let count = document.getElementById("count").value;
-
-        if (!count) {
-
-            alert("لطفا تمام اطلاعات خواسته شده را وارد نمایید");
-            return;
-        }
-
-        let counter="";
-        for (let i = 0; i < (+count); i++) {
-            counter += (i + 1) + ". " + "<br>";
-        }
-
-        let result = "🔅 دوستانی که قصد شرکت در ایونت را دارند لطفا اسمشان را همراه با محل سکونت (تهران-غرب، تهران-جنوب، کرج...) داخل لیست زیر بنویسند. همچنین اگر با ماشین شخصی به ایونت می‌آيند و مایل هستند بقیه دوستان را همراه خود بیاورند لطفا یک استیکر ماشین همراه با تعداد ظرفیت خالی جلو اسمشان بگذارند(افراد سوار شده به ماشین طبق لینک در توضیحات مبلغی را به عنوان هزینه استهلاک و سوخت به راننده ها می‌دهند). " +
-            "<br>" +
-            "🔅 حداکثر زمان وارد کردن نام در این فرم شب قبل از حرکت است و افرادی که وضعیت خود را مشخص نکرده باشند با احترام از گروه حذف می‌شوند. " +
-            "<br>" +
-            "🔅اگر نتوانستید برای آمدن همراه ماشین فرد دیگری بشوید لطفا تا ساعت‌های پایانی صبر کنید. بیشتر مواقع در چند ساعت مانده به حرکت تمام افراد همراه دیگر ماشين‌ها می‌شوند و در ایونت شرکت می‌کنند. " +
-            "<br>" +
-            "0. نام شما، محل سکونت، 🚗، 1 نفر ظرفیت" +
-            "<br>" +
-            counter;
-
-
-        document.getElementById("result").innerHTML = result;
-    }
-</script>

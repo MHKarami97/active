@@ -50,40 +50,170 @@ permalink: "/creator.html"
 
 <div class="calculate" style="text-align:right;">
 
-    <select id="with">
+    <select id="witch" onchange="selector()">
         <option selected disabled>انتخاب نوع ایونت</option>
-        <option value="travel">طبیعت‌کردی</option>
+        <optgroup label="ایونت‌ها">
+            <option value="travel">طبیعت‌گردی</option>
+            <option value="music">موسیقی</option>
+            <option value="film">فیلم</option>
+            <option value="sport">ورزش</option>
+            <option value="design">طراحی</option>
+            <option value="book">کتاب‌خوانی</option>
+            <option value="english">دیسکاشن</option>
+        </optgroup>
+        <optgroup label="اطلاعات بیشتر">
+            <option value="cars">لیست ماشین‌ها</option>
+            <option value="finish">متن پایان ایونت</option>
+        </optgroup>
     </select>
 
-    <input type="text" id="title" placeholder="عنوان" required>
-    <input type="datetime-local" id="goDateTime" placeholder="زمان رفت" required>
-    <input type="datetime-local" id="backDateTime" placeholder="زمان برگشت" required>
-    <input type="text" id="gathering" placeholder="محل جمع شدن" required>
-    <input type="number" id="difficulty" placeholder="سختی" required>
-    <input type="text" id="weather" placeholder="آب و هوا" required>
-    <input type="number" id="temperature" placeholder="میانگین دما" required>
-    <input type="text" id="description" placeholder="توضیحات" required>
-    <input type="url" id="link" placeholder="لینک گروه موقت" required>
+    <div id="travel" style="display: none;">
+        <input type="text" id="title" placeholder="عنوان" required>
+        <input type="datetime-local" id="goDateTime" placeholder="زمان رفت" required>
+        <input type="datetime-local" id="backDateTime" placeholder="زمان برگشت" required>
+        <input type="text" id="gathering" placeholder="محل جمع شدن" required>
+        <input type="number" id="difficulty" placeholder="سختی" required>
+        <input type="text" id="weather" placeholder="آب و هوا" required>
+        <input type="number" id="temperature" placeholder="میانگین دما" required>
+        <input type="text" id="description" placeholder="توضیحات" required>
+        <input type="url" id="link" placeholder="لینک گروه موقت" required>
+    </div>
 
-    <input type="submit" value="ایجاد ایونت" onclick="calculate()">
+    <div id="cars" style="display: none;">
+        <input type="number" id="count" placeholder="تعداد افراد" required>
+    </div>
+
+    <input type="submit" value="ایجاد" onclick="calculate()">
 
     <p id="result" style="text-align: right;direction: rtl;"></p><br>
 </div>
 
 <script>
-    function calculate() {
+    function selector() {
+        let items = document.getElementById("witch");
+        let witch = items.options[items.selectedIndex].value;
 
-        let items = document.getElementById("with");
+        let allSelectors = ["travel", "cars", "music", "film", "book", "design", "english", "sport"];
+        var allItems = [];
+
+        for (let i = 0; i < allSelectors.length; i++) {
+            let tmp = document.getElementById(allSelectors[i]);
+
+            if (tmp != null)
+                allItems.push(tmp);
+        }
+
+        switch (witch) {
+            case "travel":
+                hideAll(allItems);
+                document.getElementById("travel").style.display = "block";
+                break;
+            case "cars":
+                hideAll(allItems);
+                document.getElementById("cars").style.display = "block";
+                break;
+            case "finish":
+                hideAll(allItems);
+                break;
+            case "music":
+                hideAll(allItems);
+                alert("به زودی");
+                break;
+            case "film":
+                hideAll(allItems);
+                alert("به زودی");
+                break;
+            case "book":
+                hideAll(allItems);
+                alert("به زودی");
+                break;
+            case "sport":
+                hideAll(allItems);
+                alert("به زودی");
+                break;
+            case "design":
+                hideAll(allItems);
+                alert("به زودی");
+                break;
+            case "english":
+                hideAll(allItems);
+                alert("به زودی");
+                break;
+            default:
+                alert("لطفا نوع ایونت را انتخاب کنید");
+                break;
+        }
+    }
+
+    function calculate() {
+        let items = document.getElementById("witch");
         let witch = items.options[items.selectedIndex].value;
 
         switch (witch) {
             case "travel":
                 CalculateTravel();
                 break;
+            case "cars":
+                CalculateCars();
+                break;
+            case "finish":
+                CalculateFinish();
+                break;
             default:
                 alert("لطفا نوع ایونت را انتخاب کنید");
                 break;
         }
+    }
+
+    function CalculateCars() {
+        let count = document.getElementById("count").value;
+
+        if (!count) {
+
+            alert("لطفا تمام اطلاعات خواسته شده را وارد نمایید");
+            return;
+        }
+
+        let counter = "";
+        for (let i = 0; i < (+count); i++) {
+            counter += (i + 1) + ". " + "<br>";
+        }
+
+        let result = "🔅 دوستانی که قصد شرکت در ایونت را دارند لطفا اسمشان را همراه با محل سکونت (تهران-غرب، تهران-جنوب، کرج...) داخل لیست زیر بنویسند. همچنین اگر با ماشین شخصی به ایونت می‌آيند و مایل هستند بقیه دوستان را همراه خود بیاورند لطفا یک استیکر ماشین همراه با تعداد ظرفیت خالی جلو اسمشان بگذارند(افراد سوار شده به ماشین طبق لینک در توضیحات مبلغی را به عنوان هزینه استهلاک و سوخت به راننده ها می‌دهند). " +
+            "<br>" +
+            "🔅 حداکثر زمان وارد کردن نام در این فرم شب قبل از حرکت است و افرادی که وضعیت خود را مشخص نکرده باشند با احترام از گروه حذف می‌شوند. " +
+            "<br>" +
+            "🔅اگر نتوانستید برای آمدن همراه ماشین فرد دیگری بشوید لطفا تا ساعت‌های پایانی صبر کنید. بیشتر مواقع در چند ساعت مانده به حرکت تمام افراد همراه دیگر ماشين‌ها می‌شوند و در ایونت شرکت می‌کنند. " +
+            "<br>" +
+            "0. نام شما، محل سکونت، 🚗، 1 نفر ظرفیت" +
+            "<br>" +
+            counter;
+
+
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function CalculateFinish() {
+
+        let result = "⛱ با تشکر از افرادی که در ایونت شرکت کردند." +
+            "<br>" +
+            "🚘 اگر همراه با ماشین فرد دیگری به ایونت آمده بودید لطفا توسط لینک زیر هزینه را حساب کنید و به حساب فرد راننده واریز نمایید. دقت کنید که در بخش مسافت مجموع مسافت (رفت و برگشت) را وارد کنید" +
+            "<br>" +
+            "🔸 active-group.ir/calculate" +
+            "<br>" +
+            "📬 اگر درباره ایونت نظری دارید لطفا آن را در لینک زیر وارد کنید:" +
+            "<br>" +
+            "🔸 active-group.ir/survey" +
+            "<br>" +
+            "📬 اگر پیشنهادی برای ایونت‌ها آینده دارید هم می‌توانید آن را در این لینک با ما در میان بگذارید:" +
+            "<br>" +
+            "🔸 active-group.ir/introduction" +
+            "<br>" +
+            "📬 لینک گروه اصلی:" +
+            "<br>" +
+            "🔸 t.me/ACTIVE_COMMUNITY";
+
+        document.getElementById("result").innerHTML = result;
     }
 
     function CalculateTravel() {
@@ -159,6 +289,12 @@ permalink: "/creator.html"
             "🔶 " + link;
 
         document.getElementById("result").innerHTML = result;
+    }
+
+    function hideAll(allItems) {
+        for (let i = 0; i < allItems.length; i++) {
+            allItems[i].style.display = "none";
+        }
     }
 
     function getDay(d) {
