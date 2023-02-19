@@ -21,20 +21,6 @@ comments: true
   <img src="/assets/img/join/02.jpg" alt="join" width="400" />
 </p>
 
-### عکس واریز
-برای پرداخت هزینه شرکت در ایونت هم کافی است آن را به شماره گفته شده کارت به کارت کنید و سپس عکس از صفحه پرداخت گرفته و آن را در سایت زیر آپلود کنید:
-[uupload](https://uupload.ir/)  
-
-<p align="center">
-  <img src="/assets/img/join/07.jpg" alt="join" width="400" />
-</p>
-
-بعد از آپلود کافی است بر روی کپی بخش لینک مستقیم کلیک کنید و آن را در بخش مربوطه قرار دهید.  
-
-<p align="center">
-  <img src="/assets/img/join/08.jpg" alt="join" width="400" />
-</p>
-
 اکنون کافی است برای ارسال اطلاعات بر روی `submit` کلیک کنید.
 
 <p align="center">
